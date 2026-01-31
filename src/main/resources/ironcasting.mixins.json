@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "pub.pigeon.yggdyy.ironcasting.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "ironcasting.refmap.json",
+  "mixins": [
+    "AbstractSpellMixin",
+    "PatternIotaMixin",
+    "PatternRegistryManifestAccessor",
+    "ScrollMixin",
+    "SpellRegistryAccessor"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

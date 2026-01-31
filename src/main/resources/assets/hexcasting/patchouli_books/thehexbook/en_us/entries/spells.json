@@ -1,0 +1,24 @@
+{
+  "name": "ironcasting.page.spells.title",
+  "icon": "irons_spellbooks:scroll",
+  "category": "hexcasting:patterns/spells",
+  "advancement": "hexcasting:root",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "ironcasting.page.spells.0"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "ironcasting.page.spells.1"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "ironcasting.page.spells.2"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "ironcasting.page.spells.3"
+    }
+  ]
+}
