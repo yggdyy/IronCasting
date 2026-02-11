@@ -10,11 +10,15 @@ import pub.pigeon.yggdyy.ironcasting.IronCasting;
 public class IronSpellIconMatcher extends RegexMatcher.Standard {
     public static final ResourceLocation ID = ResourceLocation.fromNamespaceAndPath(IronCasting.MODID, "ironsspellicon");
     public IronSpellIconMatcher() {
-        super("IronsSpellIcon", Standard.IDENTIFIER_REGEX_INSENSITIVE, ID, str -> {
-            if(!ResourceLocation.isValidResourceLocation(str)) return null;
-            var spell = SpellRegistry.getSpell(str);
+        super("IronsSpellIcon", "(?:[0-9a-zA-Z._-]+:)?.*", ID, str -> {
+            var parse = str.split(",");
+            if(parse.length != 2) return null;
+            String id = parse[0];
+            int level = Integer.parseInt(parse[1]);
+            if(!ResourceLocation.isValidResourceLocation(id)) return null;
+            var spell = SpellRegistry.getSpell(id);
             if(spell == SpellRegistry.none()) return null;
-            return new InlineMatch.DataMatch(new IronSpellIconData(str));
+            return new InlineMatch.DataMatch(new IronSpellIconData(id, level));
         }, MatcherInfo.fromId(ID));
     }
 }

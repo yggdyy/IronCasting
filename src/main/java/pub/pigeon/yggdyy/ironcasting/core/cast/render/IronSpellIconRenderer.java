@@ -20,10 +20,10 @@ public class IronSpellIconRenderer implements InlineRenderer<IronSpellIconData> 
         AbstractSpell spell = SpellRegistry.getSpell(ironSpellIconData.getSpellID());
         ResourceLocation textureID = spell.getSpellIconResource();
         guiGraphics.blit(textureID, 0, 0, 0, 0, 8, 8, 8, 8);
-        return 12;
+        return 10;
     }
     @Override
     public int charWidth(IronSpellIconData ironSpellIconData, Style style, int i) {
-        return 12;
+        return 10;
     }
 }

@@ -11,6 +11,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import pub.pigeon.yggdyy.ironcasting.core.cast.actions.iron.general.AbstractIronSpellAction;
+import pub.pigeon.yggdyy.ironcasting.core.cast.render.IronSpellIconData;
 
 @Mixin(PatternIota.class)
 public class PatternIotaMixin {
@@ -20,7 +21,8 @@ public class PatternIotaMixin {
             if(PatternRegistryManifestAccessor.getNORMAL_ACTION_LOOKUP().containsKey(pat.getAngles())) {
                 ResourceKey<ActionRegistryEntry> key = PatternRegistryManifestAccessor.getNORMAL_ACTION_LOOKUP().get(pat.getAngles());
                 if(HexActions.REGISTRY.get(key).action() instanceof AbstractIronSpellAction spell) {
-                    cir.setReturnValue(Component.literal(String.format("[IronsSpellIcon:%s]", spell.getIronSpell().getSpellId())));
+                    //cir.setReturnValue(Component.literal(String.format("[IronsSpellIcon:%s,%d]", spell.getIronSpell().getSpellId(), spell.getLevel())));
+                    cir.setReturnValue(new IronSpellIconData(spell.getIronSpell().getSpellId(), spell.getLevel()).asText(true));
                 }
             }
         }
