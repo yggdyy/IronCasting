@@ -1,4 +1,4 @@
-package pub.pigeon.yggdyy.ironcasting.core.cast.actions
+package pub.pigeon.yggdyy.ironcasting.core.cast.actions.iron.holy
 
 import at.petrak.hexcasting.api.casting.RenderedSpell
 import at.petrak.hexcasting.api.casting.eval.CastingEnvironment
@@ -7,7 +7,7 @@ import io.redspace.ironsspellbooks.entity.spells.wisp.WispEntity
 import io.redspace.ironsspellbooks.spells.holy.WispSpell
 import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.phys.Vec3
-import pub.pigeon.yggdyy.ironcasting.core.cast.capabilities.IronCastingCapProvider
+import pub.pigeon.yggdyy.ironcasting.core.cast.actions.iron.general.AbstractLivingEntityVectorIronSpellAction
 
 
 //target: LivingEntity, spawnPos: Vec3, powerFactor: Int ->

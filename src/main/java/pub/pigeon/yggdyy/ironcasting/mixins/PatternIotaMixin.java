@@ -10,8 +10,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import pub.pigeon.yggdyy.ironcasting.core.cast.actions.AbstractIronSpellAction;
-import pub.pigeon.yggdyy.ironcasting.core.cast.actions.SimpleIronSpellAction;
+import pub.pigeon.yggdyy.ironcasting.core.cast.actions.iron.general.AbstractIronSpellAction;
 
 @Mixin(PatternIota.class)
 public class PatternIotaMixin {

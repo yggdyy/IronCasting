@@ -1,4 +1,4 @@
-package pub.pigeon.yggdyy.ironcasting.core.cast.actions
+package pub.pigeon.yggdyy.ironcasting.core.cast.actions.iron.general
 
 import at.petrak.hexcasting.api.casting.RenderedSpell
 import at.petrak.hexcasting.api.casting.castables.SpellAction
@@ -7,19 +7,18 @@ import at.petrak.hexcasting.api.casting.getDoubleBetween
 import at.petrak.hexcasting.api.casting.getEntity
 import at.petrak.hexcasting.api.casting.getVec3
 import at.petrak.hexcasting.api.casting.iota.Iota
-import at.petrak.hexcasting.api.casting.mishaps.MishapBadCaster
 import at.petrak.hexcasting.api.casting.mishaps.MishapBadEntity
 import at.petrak.hexcasting.api.casting.mishaps.MishapBadLocation
 import at.petrak.hexcasting.api.casting.mishaps.MishapDisallowedSpell
 import at.petrak.hexcasting.api.misc.MediaConstants
 import io.redspace.ironsspellbooks.api.magic.MagicData
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell
-import io.redspace.ironsspellbooks.spells.holy.WispSpell
 import net.minecraft.network.chat.Component
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.phys.Vec3
 import pub.pigeon.yggdyy.ironcasting.Config
+import pub.pigeon.yggdyy.ironcasting.core.cast.actions.iron.general.AbstractIronSpellAction
 import pub.pigeon.yggdyy.ironcasting.core.cast.capabilities.IronCastingCapProvider
 
 abstract class AbstractLivingEntityVectorIronSpellAction(spell: AbstractSpell, level: Int): AbstractIronSpellAction(spell, level) {

@@ -1,4 +1,4 @@
-package pub.pigeon.yggdyy.ironcasting.core.cast.actions
+package pub.pigeon.yggdyy.ironcasting.core.cast.actions.iron.general
 
 import at.petrak.hexcasting.api.casting.RenderedSpell
 import at.petrak.hexcasting.api.casting.castables.SpellAction
@@ -6,12 +6,12 @@ import at.petrak.hexcasting.api.casting.eval.CastingEnvironment
 import at.petrak.hexcasting.api.casting.getDoubleBetween
 import at.petrak.hexcasting.api.casting.getVec3
 import at.petrak.hexcasting.api.casting.iota.Iota
-import at.petrak.hexcasting.api.casting.mishaps.MishapBadCaster
 import at.petrak.hexcasting.api.casting.mishaps.MishapBadLocation
 import at.petrak.hexcasting.api.misc.MediaConstants
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell
 import net.minecraft.world.phys.Vec3
 import pub.pigeon.yggdyy.ironcasting.Config
+import pub.pigeon.yggdyy.ironcasting.core.cast.actions.iron.general.AbstractIronSpellAction
 import pub.pigeon.yggdyy.ironcasting.core.cast.capabilities.IronCastingCapProvider
 
 abstract class AbstractVectorIronSpellAction(spell: AbstractSpell, level: Int): AbstractIronSpellAction(spell, level) {

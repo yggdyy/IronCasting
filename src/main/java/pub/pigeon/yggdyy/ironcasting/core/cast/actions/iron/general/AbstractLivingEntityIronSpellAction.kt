@@ -1,4 +1,4 @@
-package pub.pigeon.yggdyy.ironcasting.core.cast.actions
+package pub.pigeon.yggdyy.ironcasting.core.cast.actions.iron.general
 
 import at.petrak.hexcasting.api.casting.RenderedSpell
 import at.petrak.hexcasting.api.casting.castables.SpellAction
@@ -45,14 +45,14 @@ abstract class AbstractLivingEntityIronSpellAction(spell: AbstractSpell, level: 
                 override fun cast(env: CastingEnvironment) {
                     updateIronCastCounter(env.castingEntity)
                     MagicData.getPlayerMagicData(env.castingEntity).additionalCastData = TargetEntityCastData(entity)
-                    env.castingEntity?.getCapability(IronCastingCapProvider.CAPABILITY)?.ifPresent { cap -> cap.powerArgFactor = argFactor }
+                    applyArgFactor(env.castingEntity, argFactor)
                     if(env.castingEntity is ServerPlayer) {
                         spell.castSpell(env.world, level, env.castingEntity as ServerPlayer, CastSource.NONE, false)
                         //spell.onCast(env.world, level, env.castingEntity, CastSource.NONE, MagicData.getPlayerMagicData(env.castingEntity))
                     } else {
                         spell.onCast(env.world, level, env.castingEntity, CastSource.NONE, MagicData.getPlayerMagicData(env.castingEntity))
                     }
-                    env.castingEntity?.getCapability(IronCastingCapProvider.CAPABILITY)?.ifPresent { cap -> cap.powerArgFactor = 1.0 }
+                    applyArgFactor(env.castingEntity, 1.0)
                     MagicData.getPlayerMagicData(env.castingEntity).resetAdditionalCastData()
                 }
             }

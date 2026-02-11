@@ -1,4 +1,4 @@
-package pub.pigeon.yggdyy.ironcasting.core.cast.actions
+package pub.pigeon.yggdyy.ironcasting.core.cast.actions.iron.nature
 
 import at.petrak.hexcasting.api.casting.RenderedSpell
 import at.petrak.hexcasting.api.casting.eval.CastingEnvironment
@@ -7,7 +7,7 @@ import io.redspace.ironsspellbooks.entity.spells.firefly_swarm.FireflySwarmProje
 import io.redspace.ironsspellbooks.spells.nature.FireflySwarmSpell
 import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.phys.Vec3
-import pub.pigeon.yggdyy.ironcasting.core.cast.capabilities.IronCastingCapProvider
+import pub.pigeon.yggdyy.ironcasting.core.cast.actions.iron.general.AbstractLivingEntityVectorIronSpellAction
 
 class FireflySwarmSpellAction(spell: FireflySwarmSpell, level: Int): AbstractLivingEntityVectorIronSpellAction(spell, level) {
     private data class Spell(val spell: FireflySwarmSpell, val level: Int, val entity: LivingEntity, val vec: Vec3, val argFactor: Double): RenderedSpell {

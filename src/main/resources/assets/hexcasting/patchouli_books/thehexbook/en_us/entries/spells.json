@@ -19,6 +19,10 @@
     {
       "type": "patchouli:text",
       "text": "ironcasting.page.spells.3"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "ironcasting.page.spells.4"
     }
   ]
 }

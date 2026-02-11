@@ -1,4 +1,4 @@
-package pub.pigeon.yggdyy.ironcasting.core.cast.actions
+package pub.pigeon.yggdyy.ironcasting.core.cast.actions.iron.fire
 
 import at.petrak.hexcasting.api.casting.RenderedSpell
 import at.petrak.hexcasting.api.casting.eval.CastingEnvironment
@@ -17,7 +17,7 @@ import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.entity.player.Player
 import net.minecraft.world.phys.AABB
 import net.minecraft.world.phys.Vec3
-import pub.pigeon.yggdyy.ironcasting.core.cast.capabilities.IronCastingCapProvider
+import pub.pigeon.yggdyy.ironcasting.core.cast.actions.iron.general.AbstractVectorIronSpellAction
 import java.util.function.Consumer
 import java.util.function.Predicate
 
